@@ -105,20 +105,30 @@ void HexToBits(vector<char> &Text, vector<bool> &Bits)
 		Bits.insert(Bits.end(), { 0, 0, 0, 0 });
 }
 
-inline void ClearVecIfPossible(vector<bool> &Vec) 
-{ if (Vec.size() != 0) { Vec.clear(); } }
+void ClearVecIfPossible(vector<bool> &Vec) 
+{ 
+	if (Vec.size() != 0) Vec.clear();  
+}
 
-inline vector<bool> P10(vector<bool> &bits, int b0, int b1, int b2, int b3, int b4, int b5, int b6, int b7, int b8, int b9) 
-{ return  { bits[b0], bits[b1], bits[b2], bits[b3], bits[b4], bits[b5], bits[b6], bits[b7], bits[b8], bits[b9] }; }
+vector<bool> P10(vector<bool> &bits, int b0, int b1, int b2, int b3, int b4, int b5, int b6, int b7, int b8, int b9) 
+{ 
+	return  { bits[b0], bits[b1], bits[b2], bits[b3], bits[b4], bits[b5], bits[b6], bits[b7], bits[b8], bits[b9] };
+}
 
-inline vector<bool> P4(vector<bool> &bits, int b0, int b1, int b2, int b3) 
-{ return { bits[b0], bits[b1], bits[b2], bits[b3] }; }
+vector<bool> P4(vector<bool> &bits, int b0, int b1, int b2, int b3) 
+{ 
+	return { bits[b0], bits[b1], bits[b2], bits[b3] }; 
+}
 
-inline vector<bool> P10w8(vector<bool> &bits) 
-{ return { bits[5], bits[2], bits[6], bits[3], bits[7], bits[4], bits[9], bits[8] }; }
+vector<bool> P10w8(vector<bool> &bits) 
+{ 
+	return { bits[5], bits[2], bits[6], bits[3], bits[7], bits[4], bits[9], bits[8] }; 
+}
 
-inline vector<bool> P4w8(vector<bool> &bits) 
-{ return { bits[3], bits[0], bits[1], bits[2], bits[1], bits[2], bits[3], bits[0] }; }
+vector<bool> P4w8(vector<bool> &bits) 
+{ 
+	return { bits[3], bits[0], bits[1], bits[2], bits[1], bits[2], bits[3], bits[0] }; 
+}
 
 vector<bool> P8(vector<bool> &bits, int b0, int b1, int b2, int b3, int b4, int b5, int b6, int b7)
 {
